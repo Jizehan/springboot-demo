@@ -1,0 +1,17 @@
+server:
+ port: 8081
+
+spring:
+  datasource:
+   driver-class-name: com.mysql.jdbc.Driver
+   url: jdbc:mysql://10.8.3.86:3306/demo?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+   username: root
+   password: root
+   type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis-plus:
+ global-config:
+  db-config:
+   table-prefix: sys_
+ type-aliases-package: com.example.demo.entity
+ mapper-locations: classpath*:/mapper/**Mapper.xml
